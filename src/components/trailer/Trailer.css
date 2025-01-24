@@ -1,3 +1,3 @@
 .react-player-container{
-    height: 90svh;
+    height: calc(100svh - 62px);
 }
