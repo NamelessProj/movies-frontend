@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import './App.css';
 import Header from "./components/header/Header.jsx";
+import Trailer from "./components/trailer/Trailer.jsx";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home movies={movies} />} />
+                <Route path="/trailer/:ytTrailerId" element={<Trailer />} />
             </Route>
         </Routes>
     </div>
