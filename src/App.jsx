@@ -5,7 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import './App.css';
 import Header from "./components/header/Header.jsx";
-import Trailer from "./components/trailer/Trailer.jsx";
+import Trailer from "./pages/trailer/Trailer.jsx";
 
 function App() {
 
