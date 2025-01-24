@@ -7,6 +7,7 @@ import './App.css';
 import Header from "./components/header/Header.jsx";
 import Trailer from "./pages/trailer/Trailer.jsx";
 import Reviews from "./pages/reviews/Reviews.jsx";
+import NotFound from "./pages/notFound/NotFound.jsx";
 
 function App() {
     const [movies, setMovies] = useState([]);
@@ -45,6 +46,7 @@ function App() {
                 <Route index element={<Home movies={movies} />} />
                 <Route path="/trailer/:ytTrailerId" element={<Trailer />} />
                 <Route path="/reviews/:imdbId" element={<Reviews getMovieData={getMovieData} movie={movie} setReviews={setReviews} reviews={reviews} />} />
+                <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
     </div>
