@@ -1,0 +1,14 @@
+.not-found-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: calc(100svh - 56px);
+
+    p{
+        font-size: 1.25rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+}
