@@ -31,7 +31,7 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
     }
 
     return (
-        <Container>
+        <Container className="mt-4">
             <Row>
                 <Col>
                     <h3>Reviews</h3>
@@ -39,7 +39,7 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
             </Row>
             <Row className="mt-2">
                 <Col>
-                    <img src={movie?.poster} loading="lazy" alt="" />
+                    <img src={movie?.poster} loading="lazy" alt="" style={{borderRadius: '10px'}} />
                 </Col>
                 <Col>
                     <Row>
