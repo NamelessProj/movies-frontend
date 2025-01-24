@@ -8,6 +8,7 @@
         background-color: black;
 
         .movie-card{
+            --_img: url('https://media.themoviedb.org/t/p/original/maFjKnJ62hDQ9E66dKqDZgbUy0H.jpg');
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
