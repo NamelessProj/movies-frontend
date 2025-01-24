@@ -4,6 +4,7 @@ import Layout from "./components/Layout.jsx";
 import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import './App.css';
+import Header from "./components/header/Header.jsx";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+        <Header />
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home movies={movies} />} />
