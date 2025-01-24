@@ -3,6 +3,33 @@
     background-color: black;
     position: relative;
 
+    .movie-buttons-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+
+        .play-button-icon-container{
+            padding: 0;
+            margin: 0;
+            width: 150px;
+
+            .play-button-icon{
+                padding: 0;
+                margin: 0;
+                color: gold;
+                font-size: 3rem;
+                cursor: pointer;
+                opacity: 0.5;
+                transition: opacity 300ms;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .movie-card-container{
         height: 550px;
         background-color: black;
@@ -41,5 +68,13 @@
             height: 100%;
             width: 100%;
         }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .movie-detail{
+        flex-direction: column;
+        align-items: center;
+        top: 20px;
     }
 }
