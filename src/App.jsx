@@ -6,15 +6,28 @@ import Home from "./pages/home/Home.jsx";
 import './App.css';
 import Header from "./components/header/Header.jsx";
 import Trailer from "./pages/trailer/Trailer.jsx";
+import Reviews from "./pages/reviews/Reviews.jsx";
 
 function App() {
-
     const [movies, setMovies] = useState([]);
+    const [movie, setMovie] = useState(null);
+    const [reviews, setReviews] = useState([]);
 
     const getMovies = async () => {
         try{
             const response = await api.get("/movies");
             setMovies(response.data);
+        }catch(err){
+            console.error(err);
+        }
+    }
+
+    const getMovieData = async (imdbId) => {
+        try{
+            const response = await api.get(`/movies/${imdbId}`);
+            const singleMovie = response.data;
+            setMovie(singleMovie);
+            setReviews(singleMovie.reviewIds);
         }catch(err){
             console.error(err);
         }
@@ -31,6 +44,7 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route index element={<Home movies={movies} />} />
                 <Route path="/trailer/:ytTrailerId" element={<Trailer />} />
+                <Route path="/reviews/:imdbId" element={<Reviews getMovieData={getMovieData} movie={movie} setReviews={setReviews} reviews={reviews} />} />
             </Route>
         </Routes>
     </div>
