@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import Layout from "./components/Layout.jsx";
 import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
+import './App.css';
 
 function App() {
 
